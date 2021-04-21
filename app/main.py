@@ -1,9 +1,12 @@
 import os
 from fastapi import FastAPI
 from pyle38 import Tile38
+from fastapi_key_auth import AuthorizerMiddleware
 
 app = FastAPI(title="test app")
 tile38 = Tile38(os.getenv("TILE38_URI"))
+
+app.add_middleware(AuthorizerMiddleware)
 
 
 @app.on_event("shutdown")
