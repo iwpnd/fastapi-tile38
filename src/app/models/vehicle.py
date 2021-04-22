@@ -1,10 +1,10 @@
 from typing import List
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Geometry(BaseModel):
     type: str = "Point"
-    coordinates: List[float]
+    coordinates: List[float] = Field(..., min_items=2, max_items=2)
 
 
 class Properties(BaseModel):
