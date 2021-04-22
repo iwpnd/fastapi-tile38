@@ -23,6 +23,10 @@ pytest-cov = "^2.11.1"
 flake8 = "^3.9.0"
 uvicorn = "^0.13.4"
 
+[mypy]
+python_version = 3.8
+ignore_missing_imports = true
+
 [tool.poe.tasks]
 test       = "poetry run pytest -vv -s tests/"
 test-cov   = "poetry run pytest -vv -s --cov=fastapi-tile38 tests/"

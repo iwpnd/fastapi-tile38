@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi_key_auth import AuthorizerMiddleware
 from app.db.db import tile38
-from app.routers import vehicle
+from app.routers import geo, vehicle
 
 app = FastAPI()
 
@@ -9,6 +9,7 @@ app.add_middleware(AuthorizerMiddleware)
 
 
 app.include_router(vehicle.router)
+app.include_router(geo.router)
 
 
 @app.on_event("shutdown")

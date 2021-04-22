@@ -15,7 +15,9 @@ router = APIRouter()
 async def get_vehicle(id: str) -> VehicleResponse:
     vehicle = await tile38.get("fleet", id).asObject()
 
-    return {"data": vehicle.object}
+    response = VehicleResponse(**({"data": vehicle.object}))
+
+    return response
 
 
 @router.get(
@@ -26,15 +28,21 @@ async def get_vehicle(id: str) -> VehicleResponse:
 )
 async def get_all_vehicles() -> VehiclesResponse:
     vehicles = await tile38.scan("fleet").asObjects()
-    print(vehicles.dict())
 
-    return {"data": [v.object for v in vehicles.objects]}
+    response = VehiclesResponse(**({"data": [v.object for v in vehicles.objects]}))
+
+    return response
 
 
-@router.post("/vehicle", tags=["vehicle"])
+@router.post(
+    "/vehicle",
+    response_model=JSONResponse,
+    response_model_exclude_none=True,
+    tags=["vehicle"],
+)
 async def set_vehicle(vehicle: Vehicle) -> JSONResponse:
     response = (
         await tile38.set("fleet", vehicle.properties.id).object(vehicle.dict()).exec()
     )
 
-    return response
+    return JSONResponse(**response.dict())
