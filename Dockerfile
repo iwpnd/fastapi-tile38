@@ -26,4 +26,4 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
 RUN poetry install
 
 # copy project
-COPY . /usr/src/app/
+COPY ./src /usr/src/app/
