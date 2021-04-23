@@ -147,7 +147,7 @@ test = ["pytest (==5.4.3)", "pytest-cov (==2.10.0)", "pytest-asyncio (>=0.14.0,<
 
 [[package]]
 name = "fastapi-key-auth"
-version = "0.2.0"
+version = "0.5.0"
 description = "API key validation Middleware"
 category = "main"
 optional = false
@@ -200,7 +200,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "identify"
-version = "2.2.3"
+version = "2.2.4"
 description = "File identification library for Python"
 category = "dev"
 optional = false
@@ -553,7 +553,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "b30e9813f67d2e4dfd16c870a6f825104b56ab0ad124a728fbe65721b473e84f"
+content-hash = "b83facdb613e53aae8e8b9626e58f652f88743417586acdcf202c76bf749e6c0"
 
 [metadata.files]
 aioredis = [
@@ -658,8 +658,8 @@ fastapi = [
     {file = "fastapi-0.63.0.tar.gz", hash = "sha256:63c4592f5ef3edf30afa9a44fa7c6b7ccb20e0d3f68cd9eba07b44d552058dcb"},
 ]
 fastapi-key-auth = [
-    {file = "fastapi-key-auth-0.2.0.tar.gz", hash = "sha256:96fa1557b296bd2043350f33f1aceef1741b8f0b5fa542592ca3b14302bee0c7"},
-    {file = "fastapi_key_auth-0.2.0-py3-none-any.whl", hash = "sha256:141fe3410a9aa8185728bb84e72f875bc78b5724cfacfe1998153f302e060c96"},
+    {file = "fastapi-key-auth-0.5.0.tar.gz", hash = "sha256:e66d0aa87c8bf607c3685c15d582dde28e721c38ae5fb0681aed7794c5b9476e"},
+    {file = "fastapi_key_auth-0.5.0-py3-none-any.whl", hash = "sha256:559cfe2f2d97ef351da1e48117331215640b4d3cc97980f10cc328a4eafb7437"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
@@ -678,8 +678,8 @@ h11 = [
     {file = "h11-0.12.0.tar.gz", hash = "sha256:47222cb6067e4a307d535814917cd98fd0a57b6788ce715755fa2b6c28b56042"},
 ]
 identify = [
-    {file = "identify-2.2.3-py2.py3-none-any.whl", hash = "sha256:398cb92a7599da0b433c65301a1b62b9b1f4bb8248719b84736af6c0b22289d6"},
-    {file = "identify-2.2.3.tar.gz", hash = "sha256:4537474817e0bbb8cea3e5b7504b7de6d44e3f169a90846cbc6adb0fc8294502"},
+    {file = "identify-2.2.4-py2.py3-none-any.whl", hash = "sha256:ad9f3fa0c2316618dc4d840f627d474ab6de106392a4f00221820200f490f5a8"},
+    {file = "identify-2.2.4.tar.gz", hash = "sha256:9bcc312d4e2fa96c7abebcdfb1119563b511b5e3985ac52f60d9116277865b2e"},
 ]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
