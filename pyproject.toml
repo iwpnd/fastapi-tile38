@@ -24,6 +24,8 @@ pytest-cov = "^2.11.1"
 flake8 = "^3.9.0"
 uvicorn = "^0.13.4"
 requests = "^2.25.1"
+pytest-asyncio = "^0.15.1"
+httpx = "^0.17.1"
 
 [mypy]
 python_version = 3.8

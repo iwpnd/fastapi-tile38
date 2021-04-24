@@ -3,7 +3,12 @@ from fastapi import APIRouter, status, HTTPException
 from pyle38.responses import JSONResponse, ObjectResponse, ObjectsResponse
 from pyle38.errors import Tile38IdNotFoundError, Tile38KeyNotFoundError
 from app.db.db import tile38
-from app.models.vehicle import Vehicle, VehicleResponse, VehiclesResponse
+from app.models.vehicle import (
+    Vehicle,
+    VehicleRequestBody,
+    VehicleResponse,
+    VehiclesResponse,
+)
 
 router = APIRouter()
 
@@ -51,7 +56,8 @@ async def get_all_vehicles() -> VehiclesResponse:
     tags=["vehicle"],
     status_code=status.HTTP_201_CREATED,
 )
-async def set_vehicle(vehicle: Vehicle) -> JSONResponse:
+async def set_vehicle(body: VehicleRequestBody) -> JSONResponse:
+    vehicle = body.data
     response = (
         await tile38.set("fleet", vehicle.properties.id).object(vehicle.dict()).exec()
     )

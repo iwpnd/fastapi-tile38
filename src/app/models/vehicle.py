@@ -17,6 +17,10 @@ class Vehicle(BaseModel):
     properties: Properties
 
 
+class VehicleRequestBody(BaseModel):
+    data: Vehicle
+
+
 class VehicleObject(BaseModel):
     id: str
     object: Vehicle
