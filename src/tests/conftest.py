@@ -10,7 +10,7 @@ from app.config.settings import settings
 default_tile38_leader_url = settings.TILE38_URI or "redis://localhost:9851"
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def event_loop():
 
     loop = get_event_loop()
