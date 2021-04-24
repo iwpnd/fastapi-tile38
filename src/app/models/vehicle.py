@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from pydantic import BaseModel, Field
 
 
@@ -17,9 +17,15 @@ class Vehicle(BaseModel):
     properties: Properties
 
 
+class VehicleObject(BaseModel):
+    id: str
+    object: Vehicle
+    distance: Optional[float] = None
+
+
 class VehicleResponse(BaseModel):
     data: Vehicle
 
 
 class VehiclesResponse(BaseModel):
-    data: List[Vehicle]
+    data: List[VehicleObject]

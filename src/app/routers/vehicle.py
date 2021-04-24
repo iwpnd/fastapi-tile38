@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from pyle38.responses import JSONResponse
+from pyle38.responses import JSONResponse, ObjectResponse, ObjectsResponse
 from app.db.db import tile38
 from app.models.vehicle import Vehicle, VehicleResponse, VehiclesResponse
 
@@ -13,11 +13,11 @@ router = APIRouter()
     response_model_exclude_none=True,
 )
 async def get_vehicle(id: str) -> VehicleResponse:
-    vehicle = await tile38.get("fleet", id).asObject()
+    vehicle: ObjectResponse[Vehicle] = await tile38.get("fleet", id).asObject()
 
-    response = VehicleResponse(**({"data": vehicle.object}))
+    response = {"data": vehicle.object}
 
-    return response
+    return VehicleResponse(**response)
 
 
 @router.get(
@@ -27,11 +27,11 @@ async def get_vehicle(id: str) -> VehicleResponse:
     response_model_exclude_none=True,
 )
 async def get_all_vehicles() -> VehiclesResponse:
-    vehicles = await tile38.scan("fleet").asObjects()
+    vehicles: ObjectsResponse[Vehicle] = await tile38.scan("fleet").asObjects()
 
-    response = VehiclesResponse(**({"data": [v.object for v in vehicles.objects]}))
+    response = {"data": vehicles.objects}
 
-    return response
+    return VehiclesResponse(**response)
 
 
 @router.post(
