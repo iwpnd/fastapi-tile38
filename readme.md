@@ -150,4 +150,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Benjamin Ramser - [@imwithpanda](https://twitter.com/imwithpanda) - ahoi@iwpnd.pw  
-Project Link: [https://github.com/iwpnd/fastapi-key-auth](https://github.com/iwpnd/fastapi-key-auth)
+Project Link: [https://github.com/iwpnd/fastapi-tile38](https://github.com/iwpnd/fastapi-tile38)
