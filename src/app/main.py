@@ -5,7 +5,7 @@ from app.routers import geo, vehicle
 
 app = FastAPI()
 
-app.add_middleware(AuthorizerMiddleware, public_paths=["/ping", "^/"])
+app.add_middleware(AuthorizerMiddleware, public_paths=["/ping"])
 
 app.include_router(vehicle.router)
 app.include_router(geo.router)
