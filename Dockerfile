@@ -8,9 +8,6 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# copy requirements file
-COPY ./pyproject.toml /usr/src/app/pyproject.toml
-
 # install dependencies
 RUN set -eux \
     && apk add --no-cache --virtual .build-deps build-base \
@@ -22,6 +19,9 @@ RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-
     cd /usr/local/bin && \
     ln -s /opt/poetry/bin/poetry && \
     poetry config virtualenvs.create false 
+
+# copy pyproject file
+COPY ./pyproject.toml /usr/src/app/pyproject.toml
 
 RUN poetry install
 
