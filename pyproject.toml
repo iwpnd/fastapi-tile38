@@ -10,6 +10,7 @@ python = "^3.8"
 fastapi = "^0.63.0"
 pyle38 = "^0.1.0"
 fastapi-key-auth = "^0.5.0"
+pydantic = {extras = ["dotenv"], version = "^1.8.1"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
@@ -22,14 +23,15 @@ isort = "^5.8.0"
 pytest-cov = "^2.11.1"
 flake8 = "^3.9.0"
 uvicorn = "^0.13.4"
+requests = "^2.25.1"
 
 [mypy]
 python_version = 3.8
 ignore_missing_imports = true
 
 [tool.poe.tasks]
-test       = "poetry run pytest -vv -s tests/"
-test-cov   = "poetry run pytest -vv -s --cov=fastapi-tile38 tests/"
+test       = "poetry run pytest -vv -s src/tests/"
+test-cov   = "poetry run pytest -vv -s --cov=fastapi-tile38 src/tests/"
 mypy       = "poetry run mypy --config-file pyproject.toml"
 lint       = "flake8 ."
 up         = "docker-compose up"
