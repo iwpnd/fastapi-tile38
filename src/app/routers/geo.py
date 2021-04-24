@@ -1,5 +1,5 @@
 from typing import Optional
-from fastapi import APIRouter
+from fastapi import APIRouter, status
 from pyle38.responses import ObjectsResponse
 from app.db.db import tile38
 from app.models.vehicle import VehiclesResponse, Vehicle
@@ -12,6 +12,7 @@ router = APIRouter()
     response_model=VehiclesResponse,
     response_model_exclude_none=True,
     tags=["geo-search"],
+    status_code=status.HTTP_200_OK,
 )
 async def get_within(lat: float, lon: float, radius: float) -> VehiclesResponse:
     vehicles: ObjectsResponse[Vehicle] = (
@@ -27,6 +28,7 @@ async def get_within(lat: float, lon: float, radius: float) -> VehiclesResponse:
     response_model=VehiclesResponse,
     response_model_exclude_none=True,
     tags=["geo-search"],
+    status_code=status.HTTP_200_OK,
 )
 async def get_nearby(
     lat: float, lon: float, radius: Optional[int] = None

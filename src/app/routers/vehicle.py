@@ -1,5 +1,7 @@
-from fastapi import APIRouter
+from typing import Optional
+from fastapi import APIRouter, status, HTTPException
 from pyle38.responses import JSONResponse, ObjectResponse, ObjectsResponse
+from pyle38.errors import Tile38IdNotFoundError, Tile38KeyNotFoundError
 from app.db.db import tile38
 from app.models.vehicle import Vehicle, VehicleResponse, VehiclesResponse
 
@@ -11,13 +13,20 @@ router = APIRouter()
     tags=["vehicle"],
     response_model=VehicleResponse,
     response_model_exclude_none=True,
+    status_code=status.HTTP_200_OK,
 )
-async def get_vehicle(id: str) -> VehicleResponse:
-    vehicle: ObjectResponse[Vehicle] = await tile38.get("fleet", id).asObject()
+async def get_vehicle(id: str) -> Optional[VehicleResponse]:
+    try:
+        vehicle: ObjectResponse[Vehicle] = await tile38.get("fleet", id).asObject()
 
-    response = {"data": vehicle.object}
+        response = {"data": vehicle.object}
+        return VehicleResponse(**response)
 
-    return VehicleResponse(**response)
+    except (Tile38KeyNotFoundError, Tile38IdNotFoundError):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"vehicle with id '{id}' not found",
+        )
 
 
 @router.get(
@@ -25,6 +34,7 @@ async def get_vehicle(id: str) -> VehicleResponse:
     tags=["vehicle"],
     response_model=VehiclesResponse,
     response_model_exclude_none=True,
+    status_code=status.HTTP_200_OK,
 )
 async def get_all_vehicles() -> VehiclesResponse:
     vehicles: ObjectsResponse[Vehicle] = await tile38.scan("fleet").asObjects()
@@ -39,6 +49,7 @@ async def get_all_vehicles() -> VehiclesResponse:
     response_model=JSONResponse,
     response_model_exclude_none=True,
     tags=["vehicle"],
+    status_code=status.HTTP_201_CREATED,
 )
 async def set_vehicle(vehicle: Vehicle) -> JSONResponse:
     response = (

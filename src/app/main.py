@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi_key_auth import AuthorizerMiddleware
 from app.db.db import tile38
 from app.routers import geo, vehicle
@@ -16,6 +16,6 @@ async def shutdown_event():
     await tile38.quit()
 
 
-@app.get("/ping")
+@app.get("/ping", tags=["public"], status_code=status.HTTP_200_OK)
 def ping():
     return {"ping": "pong!"}
