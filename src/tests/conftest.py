@@ -62,3 +62,4 @@ async def tile38(create_tile38):
 def env_setup(monkeypatch):
     monkeypatch.setenv("API_KEY_DEV", "test")
     monkeypatch.setenv("TILE38_URI", "redis://localhost:9851")
+    monkeypatch.setenv("ENVIRONMENT", "test")

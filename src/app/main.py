@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, status
 from fastapi_key_auth import AuthorizerMiddleware
 from app.db.db import tile38
@@ -5,7 +6,10 @@ from app.routers import geo, vehicle
 
 app = FastAPI()
 
-app.add_middleware(AuthorizerMiddleware, public_paths=["/ping"])
+app.add_middleware(
+    AuthorizerMiddleware,
+    public_paths=["/ping", "^/" if os.getenv("ENVIRONMENT") == "dev" else ""],
+)
 
 app.include_router(vehicle.router)
 app.include_router(geo.router)
