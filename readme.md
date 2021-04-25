@@ -75,13 +75,44 @@ application. Can be used as is, or be extended upon with other methods in the [p
 
 Once the application is started you can checkout and interact with it via on [localhost:8001/docs](http://localhost:8001/docs).
 
-Or you can use it with http/curl:
+Or you can use it with [http](https://httpie.io/)/[curl](https://curl.se/):
 
 ```sh
-echo '{ "data": { "type": "Feature", "geometry": {"type": "Point", "coordinates": [13.37, 52.25]}, "properties": {"id": "truck"}}}' | http post http://localhost:8001/vehicle x-api-key:test
+echo '{ "data": { "type": "Feature", "geometry": {"type": "Point", "coordinates": [13.37, 52.25]}, "properties": {"id": "truck"}}}' \
+      | http post http://localhost:8001/vehicle x-api-key:test
+
+> {
+    "elapsed": "37.5µs",
+    "ok": true
+}
+
+
+http get http://localhost:8001/search/within lat==52.25 lon==13.37 radius==1000 \
+  x-api-key:test
+
+> {
+    "data": [
+        {
+            "id": "truck",
+            "object": {
+                "geometry": {
+                    "coordinates": [
+                        13.37,
+                        52.25
+                    ],
+                    "type": "Point"
+                },
+                "properties": {
+                    "id": "truck"
+                },
+                "type": "Feature"
+            }
+        }
+    ]
+}
 ```
 
-Or you use it with httpx/request:
+Or you use it with [httpx](https://www.python-httpx.org/)/[requests](https://docs.python-requests.org/en/master/):
 
 ```python
 import httpx
