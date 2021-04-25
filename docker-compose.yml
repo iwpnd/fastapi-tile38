@@ -20,4 +20,3 @@ services:
     environment:
       - TILE38_URI=redis://tile38:9851
       - API_KEY_DEV=test
-      - ENVIRONMENT=dev

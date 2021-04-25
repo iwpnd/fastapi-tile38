@@ -163,13 +163,14 @@ test = ["pytest (==5.4.3)", "pytest-cov (==2.10.0)", "pytest-asyncio (>=0.14.0,<
 
 [[package]]
 name = "fastapi-key-auth"
-version = "0.5.0"
+version = "0.6.0"
 description = "API key validation Middleware"
 category = "main"
 optional = false
 python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
+fastapi = ">=0.63.0,<0.64.0"
 starlette = "0.13.6"
 
 [[package]]
@@ -689,7 +690,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9a8a0df998423a46b161f623cf3212ed5bbb77d4e1687319503e192f5fe7a3de"
+content-hash = "8c3a2df7b0be6b5f299f13e672f6bf5e6d3ff452a1d9de2cf58e244bbc25dd1f"
 
 [metadata.files]
 aioredis = [
@@ -802,8 +803,8 @@ fastapi = [
     {file = "fastapi-0.63.0.tar.gz", hash = "sha256:63c4592f5ef3edf30afa9a44fa7c6b7ccb20e0d3f68cd9eba07b44d552058dcb"},
 ]
 fastapi-key-auth = [
-    {file = "fastapi-key-auth-0.5.0.tar.gz", hash = "sha256:e66d0aa87c8bf607c3685c15d582dde28e721c38ae5fb0681aed7794c5b9476e"},
-    {file = "fastapi_key_auth-0.5.0-py3-none-any.whl", hash = "sha256:559cfe2f2d97ef351da1e48117331215640b4d3cc97980f10cc328a4eafb7437"},
+    {file = "fastapi-key-auth-0.6.0.tar.gz", hash = "sha256:eef43dba0fbcdf485a491e9051dc3417af28005daf67b54ff8d2e3ad966d3385"},
+    {file = "fastapi_key_auth-0.6.0-py3-none-any.whl", hash = "sha256:80fff58c9ca198b681e3c7c7f4f1c559d6ae0ac78c625366b50eae41dd987884"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},

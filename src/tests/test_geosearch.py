@@ -13,26 +13,29 @@ feature = {
     "properties": {"id": id},
 }
 
-api_key = {"x-api-key": "test"}
+valid_key = {"x-api-key": "test"}
+invalid_key = {"x-api-key": "invalid"}
 
 
 @pytest.mark.asyncio
 async def test_within_unauthorized(ac: AsyncClient):
     response = await ac.get(
-        "/search/within", params={"lon": lon, "lat": lat, "radius": 100}
+        "/search/within",
+        params={"lon": lon, "lat": lat, "radius": 100},
+        headers=invalid_key,
     )
 
-    response.status_code == status.HTTP_401_UNAUTHORIZED
+    assert response.status_code == status.HTTP_401_UNAUTHORIZED
 
 
 @pytest.mark.asyncio
 async def test_within_empty(ac: AsyncClient):
     response = await ac.get(
-        "/search/within", headers=api_key, params={"lon": 1, "lat": 1, "radius": 1000}
+        "/search/within", headers=valid_key, params={"lon": 1, "lat": 1, "radius": 1000}
     )
 
-    response.status_code = status.HTTP_200_OK
-    response.json() == {"data": []}
+    assert response.status_code == status.HTTP_200_OK
+    assert response.json() == {"data": []}
 
 
 @pytest.mark.asyncio
@@ -41,7 +44,7 @@ async def test_within(ac: AsyncClient, tile38: Tile38):
 
     response = await ac.get(
         "/search/within",
-        headers=api_key,
+        headers=valid_key,
         params={"lon": lon, "lat": lat, "radius": 100},
     )
 
@@ -52,7 +55,9 @@ async def test_within(ac: AsyncClient, tile38: Tile38):
 @pytest.mark.asyncio
 async def test_nearby_unauthorized(ac: AsyncClient):
     response = await ac.get(
-        "/search/nearby", params={"lon": lon, "lat": lat, "radius": 100}
+        "/search/nearby",
+        params={"lon": lon, "lat": lat, "radius": 100},
+        headers=invalid_key,
     )
 
     assert response.status_code == status.HTTP_401_UNAUTHORIZED
@@ -63,7 +68,7 @@ async def test_nearby_without_radius(ac: AsyncClient, tile38: Tile38):
     await tile38.set(key, id).object(feature).exec()
 
     response = await ac.get(
-        "/search/nearby", headers=api_key, params={"lon": 13.38, "lat": 52.26}
+        "/search/nearby", headers=valid_key, params={"lon": 13.38, "lat": 52.26}
     )
 
     assert response.status_code == status.HTTP_200_OK
@@ -78,7 +83,7 @@ async def test_nearby_with_radius(ac: AsyncClient, tile38: Tile38):
 
     response = await ac.get(
         "/search/nearby",
-        headers=api_key,
+        headers=valid_key,
         params={"lon": 13.38, "lat": 52.26, "radius": 1000},
     )
 
