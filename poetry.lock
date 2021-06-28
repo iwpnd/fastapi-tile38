@@ -467,7 +467,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pyle38"
-version = "0.2.0"
+version = "0.3.0"
 description = "Async python client for Tile38"
 category = "main"
 optional = false
@@ -715,7 +715,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "8dcbad6f4a6c14e0a75792db60a67877f2c32a95cedcbecdfc4a7c2fb38b316e"
+content-hash = "3e5b69b3ddda3f38457a10aa02e95ef507960e81f6e8d33d624a456a2bd3d8c3"
 
 [metadata.files]
 aioredis = [
@@ -978,8 +978,8 @@ pyflakes = [
     {file = "pyflakes-2.3.1.tar.gz", hash = "sha256:f5bc8ecabc05bb9d291eb5203d6810b49040f6ff446a756326104746cc00c1db"},
 ]
 pyle38 = [
-    {file = "pyle38-0.2.0-py3-none-any.whl", hash = "sha256:c072162f8b264fab2100ef2c41dd23cb27838e43c98a70f382f93d6717ff77a4"},
-    {file = "pyle38-0.2.0.tar.gz", hash = "sha256:fa692ec3e868d4f670b4b6af45440a51c040c205481e4a3f2fee13c7b7806fca"},
+    {file = "pyle38-0.3.0-py3-none-any.whl", hash = "sha256:871c7eef267b7266586550bb4cb7d370d26c183a6471092b2c009911d57e2c5b"},
+    {file = "pyle38-0.3.0.tar.gz", hash = "sha256:1d95bd95cc4dee35c0e8eddd6c679ede8c2df3d52691694c958175c334f1275b"},
 ]
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
