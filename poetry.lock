@@ -1,6 +1,6 @@
 [[package]]
 name = "aioredis"
-version = "2.0.0b1"
+version = "2.0.0"
 description = "asyncio (PEP 3156) Redis support"
 category = "main"
 optional = false
@@ -470,14 +470,14 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pyle38"
-version = "0.3.1"
+version = "0.3.2"
 description = "Async python client for Tile38"
 category = "main"
 optional = false
 python-versions = ">=3.8,<4.0"
 
 [package.dependencies]
-aioredis = "2.0.0b1"
+aioredis = ">=2.0.0,<3.0.0"
 pydantic = ">=1.8.1,<2.0.0"
 
 [[package]]
@@ -726,12 +726,12 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "af334d70a85341674f24a136aa2ce9aaf8a5fe2e40521db76355bf5a78731095"
+content-hash = "3ec6c85ecc06ec2adf99948f7f149774cfdf4af2934d500e659ba85fee4d9f3f"
 
 [metadata.files]
 aioredis = [
-    {file = "aioredis-2.0.0b1-py3-none-any.whl", hash = "sha256:ca2c17093c019f88e4c1483353d38e448f72e3f24ba4119efdcbfdcf42f10a43"},
-    {file = "aioredis-2.0.0b1.tar.gz", hash = "sha256:f1dbcfd6cd664e69dbd457b4ae3d658429d3ba1c2e68d493d3562203b703a25f"},
+    {file = "aioredis-2.0.0-py3-none-any.whl", hash = "sha256:9921d68a3df5c5cdb0d5b49ad4fc88a4cfdd60c108325df4f0066e8410c55ffb"},
+    {file = "aioredis-2.0.0.tar.gz", hash = "sha256:3a2de4b614e6a5f8e104238924294dc4e811aefbe17ddf52c04a93cbf06e67db"},
 ]
 anyio = [
     {file = "anyio-3.1.0-py3-none-any.whl", hash = "sha256:5e335cef65fbd1a422bbfbb4722e8e9a9fadbd8c06d5afe9cd614d12023f6e5a"},
@@ -989,8 +989,8 @@ pyflakes = [
     {file = "pyflakes-2.3.1.tar.gz", hash = "sha256:f5bc8ecabc05bb9d291eb5203d6810b49040f6ff446a756326104746cc00c1db"},
 ]
 pyle38 = [
-    {file = "pyle38-0.3.1-py3-none-any.whl", hash = "sha256:a61fc8057e05110e6de16ae9fee4029843142e610d0f993fed0792eb8ce5ae49"},
-    {file = "pyle38-0.3.1.tar.gz", hash = "sha256:f73d159c95761656b23af28c509fa24b998af62f03f50e906a6df637eccaf3d3"},
+    {file = "pyle38-0.3.2-py3-none-any.whl", hash = "sha256:73db38863e9d10798b9989717af816b6fd2c7ba1f9109d1a48e08de6387aedc7"},
+    {file = "pyle38-0.3.2.tar.gz", hash = "sha256:3c2848a32678b4aecc4adafa0309b2c0a3b5d77b9dbcebbd9369bfb39b132724"},
 ]
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
