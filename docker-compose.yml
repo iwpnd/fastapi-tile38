@@ -2,7 +2,7 @@ version: "3"
 
 services:
   tile38:
-    image: tile38/tile38:1.24.3
+    image: tile38/tile38:1.25.3
     command: tile38-server -vv -p 9851
     ports:
       - 9851:9851
