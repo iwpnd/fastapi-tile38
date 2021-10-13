@@ -275,7 +275,7 @@ http2 = ["h2 (>=3,<5)"]
 
 [[package]]
 name = "httpx"
-version = "0.19.0"
+version = "0.20.0"
 description = "The next generation HTTP client."
 category = "dev"
 optional = false
@@ -290,6 +290,7 @@ sniffio = "*"
 
 [package.extras]
 brotli = ["brotlicffi", "brotli"]
+cli = ["click (>=8.0.0,<9.0.0)", "rich (>=10.0.0,<11.0.0)", "pygments (>=2.0.0,<3.0.0)"]
 http2 = ["h2 (>=3,<5)"]
 
 [[package]]
@@ -749,7 +750,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "2b72ac38e8fb5cb9885a968611e9c5f9093ed50248f4cf0eb1c2b0f7e83e6245"
+content-hash = "04ba995f79b9ec0989cd51e6a91004940af34c8cecfa4991e7d076a6a176d2e6"
 
 [metadata.files]
 aioredis = [
@@ -876,8 +877,8 @@ httpcore = [
     {file = "httpcore-0.13.4.tar.gz", hash = "sha256:9fa4c623bb9d2280c009c34658cc6315e4fd425a395145645bee205d827263e4"},
 ]
 httpx = [
-    {file = "httpx-0.19.0-py3-none-any.whl", hash = "sha256:9bd728a6c5ec0a9e243932a9983d57d3cc4a87bb4f554e1360fce407f78f9435"},
-    {file = "httpx-0.19.0.tar.gz", hash = "sha256:92ecd2c00c688b529eda11cedb15161eaf02dee9116712f621c70d9a40b2cdd0"},
+    {file = "httpx-0.20.0-py3-none-any.whl", hash = "sha256:33af5aad9bdc82ef1fc89219c1e36f5693bf9cd0ebe330884df563445682c0f8"},
+    {file = "httpx-0.20.0.tar.gz", hash = "sha256:09606d630f070d07f9ff28104fbcea429ea0014c1e89ac90b4d8de8286c40e7b"},
 ]
 identify = [
     {file = "identify-2.2.10-py2.py3-none-any.whl", hash = "sha256:18d0c531ee3dbc112fa6181f34faa179de3f57ea57ae2899754f16a7e0ff6421"},
