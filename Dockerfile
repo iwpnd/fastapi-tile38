@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.8.9-alpine3.13
+FROM python:3.9.10-slim-buster
 
 # set work directory
 WORKDIR /usr/src/app
@@ -10,15 +10,18 @@ ENV PYTHONUNBUFFERED 1
 
 # install dependencies
 RUN set -eux \
-    && apk add --no-cache --virtual .build-deps build-base \
-        libressl-dev libffi-dev gcc musl-dev python3-dev curl openssl-dev cargo \
-    && pip install --upgrade pip setuptools wheel \
-    && rm -rf /root/.cache/pip
+    && apt-get -y update \
+    && apt-get -y upgrade \
+    && apt-get -y install curl \
+    && pip install --upgrade pip \
+    && rm -rf /root/.cache/pip \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | POETRY_HOME=/opt/poetry python && \
     cd /usr/local/bin && \
     ln -s /opt/poetry/bin/poetry && \
-    poetry config virtualenvs.create false 
+    poetry config virtualenvs.create false
 
 # copy pyproject file
 COPY ./pyproject.toml /usr/src/app/pyproject.toml
