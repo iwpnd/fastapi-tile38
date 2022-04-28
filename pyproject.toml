@@ -25,7 +25,7 @@ uvicorn = "^0.17.6"
 requests = "^2.27.1"
 pytest-asyncio = "^0.18.3"
 httpx = "^0.22.0"
-mypy = "^0.942"
+mypy = "^0.950"
 
 [mypy]
 python_version = 3.8
