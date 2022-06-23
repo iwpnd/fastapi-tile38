@@ -50,17 +50,6 @@ python-versions = ">=3.6"
 python-dateutil = ">=2.7.0"
 
 [[package]]
-name = "asgiref"
-version = "3.4.1"
-description = "ASGI specs, helper code, and adapters"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.extras]
-tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
-
-[[package]]
 name = "async-timeout"
 version = "3.0.1"
 description = "Timeout context manager for asyncio programs"
@@ -723,19 +712,18 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.17.6"
+version = "0.18.1"
 description = "The lightning-fast ASGI server."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-asgiref = ">=3.4.0"
 click = ">=7.0"
 h11 = ">=0.8"
 
 [package.extras]
-standard = ["websockets (>=10.0)", "httptools (>=0.4.0)", "watchgod (>=0.6)", "python-dotenv (>=0.13)", "PyYAML (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "colorama (>=0.4)"]
+standard = ["websockets (>=10.0)", "httptools (>=0.4.0)", "watchfiles (>=0.13)", "python-dotenv (>=0.13)", "PyYAML (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "colorama (>=0.4)"]
 
 [[package]]
 name = "virtualenv"
@@ -758,7 +746,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "c98130b41eb4817d15d75a9b977f7c6062e3232ccef8cd94a6f0d7b1b0dceb18"
+content-hash = "949036efb2df15b3f7a58d384bf8f9371dcfaa9f5abfa39a5733f5c287f57ca7"
 
 [metadata.files]
 aioredis = [
@@ -776,10 +764,6 @@ appdirs = [
 arrow = [
     {file = "arrow-1.2.1-py3-none-any.whl", hash = "sha256:6b2914ef3997d1fd7b37a71ce9dd61a6e329d09e1c7b44f4d3099ca4a5c0933e"},
     {file = "arrow-1.2.1.tar.gz", hash = "sha256:c2dde3c382d9f7e6922ce636bf0b318a7a853df40ecb383b29192e6c5cc82840"},
-]
-asgiref = [
-    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
-    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
 ]
 async-timeout = [
     {file = "async-timeout-3.0.1.tar.gz", hash = "sha256:0c3c816a028d47f659d6ff5c745cb2acf1f966da1fe5c19c77a70282b25f4c5f"},
@@ -1152,8 +1136,8 @@ urllib3 = [
     {file = "urllib3-1.26.5.tar.gz", hash = "sha256:a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"},
 ]
 uvicorn = [
-    {file = "uvicorn-0.17.6-py3-none-any.whl", hash = "sha256:19e2a0e96c9ac5581c01eb1a79a7d2f72bb479691acd2b8921fce48ed5b961a6"},
-    {file = "uvicorn-0.17.6.tar.gz", hash = "sha256:5180f9d059611747d841a4a4c4ab675edf54c8489e97f96d0583ee90ac3bfc23"},
+    {file = "uvicorn-0.18.1-py3-none-any.whl", hash = "sha256:013c4ea0787cc2dc456ef4368e18c01982e6be57903e4d3183218e543eb889b7"},
+    {file = "uvicorn-0.18.1.tar.gz", hash = "sha256:35703e6518105cfe53f16a5a9435db3e2e227d0784f1fd8fbc1214b1fdc108df"},
 ]
 virtualenv = [
     {file = "virtualenv-20.4.7-py2.py3-none-any.whl", hash = "sha256:2b0126166ea7c9c3661f5b8e06773d28f83322de7a3ff7d06f0aed18c9de6a76"},
