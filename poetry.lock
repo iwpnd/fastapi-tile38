@@ -712,7 +712,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.18.1"
+version = "0.18.2"
 description = "The lightning-fast ASGI server."
 category = "dev"
 optional = false
@@ -746,7 +746,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "949036efb2df15b3f7a58d384bf8f9371dcfaa9f5abfa39a5733f5c287f57ca7"
+content-hash = "9f903bd2f892e47b79e4c837edb609583a9f4b07fd03d85b616b4e5e198ac259"
 
 [metadata.files]
 aioredis = [
@@ -1136,8 +1136,8 @@ urllib3 = [
     {file = "urllib3-1.26.5.tar.gz", hash = "sha256:a7acd0977125325f516bda9735fa7142b909a8d01e8b2e4c8108d0984e6e0098"},
 ]
 uvicorn = [
-    {file = "uvicorn-0.18.1-py3-none-any.whl", hash = "sha256:013c4ea0787cc2dc456ef4368e18c01982e6be57903e4d3183218e543eb889b7"},
-    {file = "uvicorn-0.18.1.tar.gz", hash = "sha256:35703e6518105cfe53f16a5a9435db3e2e227d0784f1fd8fbc1214b1fdc108df"},
+    {file = "uvicorn-0.18.2-py3-none-any.whl", hash = "sha256:c19a057deb1c5bb060946e2e5c262fc01590c6529c0af2c3d9ce941e89bc30e0"},
+    {file = "uvicorn-0.18.2.tar.gz", hash = "sha256:cade07c403c397f9fe275492a48c1b869efd175d5d8a692df649e6e7e2ed8f4e"},
 ]
 virtualenv = [
     {file = "virtualenv-20.4.7-py2.py3-none-any.whl", hash = "sha256:2b0126166ea7c9c3661f5b8e06773d28f83322de7a3ff7d06f0aed18c9de6a76"},
