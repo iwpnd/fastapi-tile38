@@ -23,7 +23,7 @@ pytest-cov = "^3.0.0"
 flake8 = "^4.0.1"
 uvicorn = "^0.18.2"
 requests = "^2.28.1"
-pytest-asyncio = "^0.18.3"
+pytest-asyncio = "^0.19.0"
 httpx = "^0.23.0"
 mypy = "^0.961"
 
@@ -32,8 +32,8 @@ python_version = 3.8
 ignore_missing_imports = true
 
 [tool.poe.tasks]
-test       = "poetry run pytest -vv -s src/tests/"
-test-cov   = "poetry run pytest -vv -s --cov=fastapi-tile38 src/tests/"
+test       = "poetry run pytest -vv --asyncio-mode=auto -s src/tests/"
+test-cov   = "poetry run pytest -vv --asyncio-mode=auto -s --cov=fastapi-tile38 src/tests/"
 mypy       = "poetry run mypy --ignore-missing-imports --config-file pyproject.toml"
 lint       = "flake8 ."
 up         = "docker-compose up"
