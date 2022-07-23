@@ -2,7 +2,7 @@ version: "3"
 
 services:
   tile38:
-    image: tile38/tile38:1.27.1
+    image: tile38/tile38:1.29.0
     command: >
       /bin/sh -c 'mkdir -p tmp/data && \
                   echo "{\"logconfig\":{\"level\":\"debug\",\"encoding\":\"json\",\"outputPaths\":[\"stdout\"],\"errorOutputPaths\":[\"stderr\"],\"encoderConfig\": {\"messageKey\":\"message\",\"levelKey\":\"level\",\"levelEncoder\":\"lowercase\", \"timeKey\":\"timestamp\",\"timeEncoder\":\"ISO8601\"}}}"> tmp/data/config
