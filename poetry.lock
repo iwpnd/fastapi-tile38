@@ -268,7 +268,7 @@ socks = ["socksio (>=1.0.0,<2.0.0)"]
 
 [[package]]
 name = "httpx"
-version = "0.23.1"
+version = "0.23.3"
 description = "The next generation HTTP client."
 category = "dev"
 optional = false
@@ -749,7 +749,7 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "3cf584af8ec9b78e9bb0bc17599a31e9758062d6c4576da9c397037c0eaa37df"
+content-hash = "467eb063a2ace01aa101c1ee9c26a8e2832b2956038935c37168c69f35e6e394"
 
 [metadata.files]
 anyio = [
@@ -895,8 +895,8 @@ httpcore = [
     {file = "httpcore-0.16.2.tar.gz", hash = "sha256:c35c5176dc82db732acfd90b581a3062c999a72305df30c0fc8fafd8e4aca068"},
 ]
 httpx = [
-    {file = "httpx-0.23.1-py3-none-any.whl", hash = "sha256:0b9b1f0ee18b9978d637b0776bfd7f54e2ca278e063e3586d8f01cda89e042a8"},
-    {file = "httpx-0.23.1.tar.gz", hash = "sha256:202ae15319be24efe9a8bd4ed4360e68fde7b38bcc2ce87088d416f026667d19"},
+    {file = "httpx-0.23.3-py3-none-any.whl", hash = "sha256:a211fcce9b1254ea24f0cd6af9869b3d29aba40154e947d2a07bb499b3e310d6"},
+    {file = "httpx-0.23.3.tar.gz", hash = "sha256:9818458eb565bb54898ccb9b8b251a28785dd4a55afbc23d0eb410754fe7d0f9"},
 ]
 identify = [
     {file = "identify-2.5.9-py2.py3-none-any.whl", hash = "sha256:a390fb696e164dbddb047a0db26e57972ae52fbd037ae68797e5ae2f4492485d"},
