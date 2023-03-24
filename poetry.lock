@@ -848,19 +848,19 @@ files = [
 
 [[package]]
 name = "pyle38"
-version = "0.9.0"
+version = "0.9.1"
 description = "Async python client for Tile38"
 category = "main"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "pyle38-0.9.0-py3-none-any.whl", hash = "sha256:b1f20c2338ee5d25699a74b3196d399f24e6340aad6210db7159678155c30a3c"},
-    {file = "pyle38-0.9.0.tar.gz", hash = "sha256:c98ebc0741825d4131f633929e0c9a097d8a8ce182cc24cbe479abee05940fdf"},
+    {file = "pyle38-0.9.1-py3-none-any.whl", hash = "sha256:79fe3a15d7159a57e138c739ad95aa38edcdeb145136674cca834b701ff886a2"},
+    {file = "pyle38-0.9.1.tar.gz", hash = "sha256:a9b06c9e2b14455a617b306a0fb5b52720239e20a78dfb4021554dcfd6718470"},
 ]
 
 [package.dependencies]
 pydantic = ">=1.8.1,<2.0.0"
-redis = ">=4.3.4,<5.0.0"
+redis = ">=4.5.3,<5.0.0"
 
 [[package]]
 name = "pytest"
@@ -1006,18 +1006,18 @@ files = [
 
 [[package]]
 name = "redis"
-version = "4.5.1"
+version = "4.5.3"
 description = "Python client for Redis database and key-value store"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "redis-4.5.1-py3-none-any.whl", hash = "sha256:5deb072d26e67d2be1712603bfb7947ec3431fb0eec9c578994052e33035af6d"},
-    {file = "redis-4.5.1.tar.gz", hash = "sha256:1eec3741cda408d3a5f84b78d089c8b8d895f21b3b050988351e925faf202864"},
+    {file = "redis-4.5.3-py3-none-any.whl", hash = "sha256:7df17a0a2b72a4c8895b462dd07616c51b1dcb48fdd7ecb7b6f4bf39ecb2e94e"},
+    {file = "redis-4.5.3.tar.gz", hash = "sha256:56732e156fe31801c4f43396bd3ca0c2a7f6f83d7936798531b9848d103381aa"},
 ]
 
 [package.dependencies]
-async-timeout = ">=4.0.2"
+async-timeout = {version = ">=4.0.2", markers = "python_version < \"3.11\""}
 
 [package.extras]
 hiredis = ["hiredis (>=1.0.0)"]
@@ -1217,4 +1217,4 @@ test = ["covdefaults (>=2.2.2)", "coverage (>=7.1)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "8fb4af621216fdc83292c5f0de2d25822bad96579fb5e86750e84c6263b097fb"
+content-hash = "78c0548fd0d68ae5aeebb999b0f421f02c27de71d950a6c743ffbbede1246854"
