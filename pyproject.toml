@@ -14,7 +14,7 @@ fastapi-key-auth = "^0.10.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.2"
-pre-commit = "^3.2.0"
+pre-commit = "^3.2.1"
 black = "^23.1"
 gitlint = "^0.19.1"
 poethepoet = "^0.19.0"
