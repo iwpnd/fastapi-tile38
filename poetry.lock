@@ -370,19 +370,19 @@ test = ["anyio[trio] (>=3.2.1,<4.0.0)", "black (==22.10.0)", "coverage[toml] (>=
 
 [[package]]
 name = "fastapi-key-auth"
-version = "0.10.1"
+version = "0.10.2"
 description = "API key validation Middleware"
 category = "main"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "fastapi_key_auth-0.10.1-py3-none-any.whl", hash = "sha256:c1c486595f129404baa794094c45c08a7ae95efc4ed16b58a4c3ebc1922d9343"},
-    {file = "fastapi_key_auth-0.10.1.tar.gz", hash = "sha256:fdb7caef124e2269f11de3a0dacb73f85e259f35d41c969fe7b761f13c2323e3"},
+    {file = "fastapi_key_auth-0.10.2-py3-none-any.whl", hash = "sha256:47aa55a3b73273371957b62e0a022d9487f3b82791eb4c4cdeddd0111b0e5b0f"},
+    {file = "fastapi_key_auth-0.10.2.tar.gz", hash = "sha256:1477692ca666a64fc0865566acd4daef4fe0fc40d85c0520430ccfa6530bfb1f"},
 ]
 
 [package.dependencies]
-fastapi = ">=0.84.0,<=0.95.0"
-starlette = ">=0.25.0,<0.26.0"
+fastapi = ">=0.84.0"
+starlette = ">=0.25.0"
 
 [[package]]
 name = "filelock"
@@ -1217,4 +1217,4 @@ test = ["covdefaults (>=2.2.2)", "coverage (>=7.1)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "4fa264f1ea3ccaa860eb95c896874a095f9eb84347aeda77d3951fc2ceba434f"
+content-hash = "73fcbad5bfbb3101d19a0b07ee16693b9ffe4886b114a89cb006ec364751107c"
