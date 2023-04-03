@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastapi = "^0.93.0"
+fastapi = "^0.95.0"
 pyle38 = "^0.9.1"
 pydantic = {extras = ["dotenv"], version = "^1.10.7"}
 fastapi-key-auth = "^0.10.2"
