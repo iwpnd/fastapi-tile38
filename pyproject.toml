@@ -13,7 +13,7 @@ pydantic = {extras = ["dotenv"], version = "^1.10.7"}
 fastapi-key-auth = "^0.10.2"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.2"
+pytest = "^7.3"
 pre-commit = "^3.2.2"
 black = "^23.3"
 gitlint = "^0.19.1"
