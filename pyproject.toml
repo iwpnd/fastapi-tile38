@@ -24,7 +24,7 @@ flake8 = "^6.0.0"
 uvicorn = "^0.21.1"
 requests = "^2.28.2"
 pytest-asyncio = "^0.21.0"
-httpx = "^0.23.3"
+httpx = "^0.24.0"
 mypy = "^1.2"
 
 [mypy]
