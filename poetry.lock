@@ -351,14 +351,14 @@ test = ["anyio[trio] (>=3.2.1,<4.0.0)", "black (==23.1.0)", "coverage[toml] (>=6
 
 [[package]]
 name = "fastapi-key-auth"
-version = "0.10.2"
+version = "0.11.0"
 description = "API key validation Middleware"
 category = "main"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = ">=3.8,<4.0"
 files = [
-    {file = "fastapi_key_auth-0.10.2-py3-none-any.whl", hash = "sha256:47aa55a3b73273371957b62e0a022d9487f3b82791eb4c4cdeddd0111b0e5b0f"},
-    {file = "fastapi_key_auth-0.10.2.tar.gz", hash = "sha256:1477692ca666a64fc0865566acd4daef4fe0fc40d85c0520430ccfa6530bfb1f"},
+    {file = "fastapi_key_auth-0.11.0-py3-none-any.whl", hash = "sha256:6eceeeb3ec6f695578c7c49a226bb6da7da2518d8ebe24c1d5d73eafce7990c0"},
+    {file = "fastapi_key_auth-0.11.0.tar.gz", hash = "sha256:81f845ffde8b604c37867d2bbadb71bfc93be48b657412ac62a39fee1d466254"},
 ]
 
 [package.dependencies]
@@ -1179,4 +1179,4 @@ test = ["covdefaults (>=2.2.2)", "coverage (>=7.1)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "b5d25ee83a96cb2ebb96f9b298ec052387a57c42b1d2a0b53e0cfeb806ed063b"
+content-hash = "0d1d2586ba53976d372b006abb5f0cdf10e64bbdef3b4678f83e6e3221357c66"
