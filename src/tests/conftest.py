@@ -1,27 +1,29 @@
-import pytest
-from asyncio import get_event_loop
+import asyncio
 from typing import AsyncGenerator
-from pyle38 import Tile38
-from httpx import AsyncClient
 
-from app.main import app
+import pytest
+from httpx import AsyncClient
+from pyle38 import Tile38
+
 from app.config.settings import settings
+from app.main import app
 
 default_tile38_leader_url = settings.TILE38_URI or "redis://localhost:9851"
 
 
 @pytest.fixture(scope="session")
 def event_loop():
-
-    loop = get_event_loop()
-
+    try:
+        loop = asyncio.get_running_loop()
+    except RuntimeError:
+        loop = asyncio.new_event_loop()
     yield loop
+    loop.close()
 
 
 @pytest.fixture()
 def create_tile38(request, event_loop):
     async def f(url: str = default_tile38_leader_url):
-
         tile38 = Tile38(url)
 
         def teardown():
@@ -47,9 +49,7 @@ def create_tile38(request, event_loop):
 
 @pytest.fixture(scope="module")
 async def ac() -> AsyncGenerator:
-
     async with AsyncClient(app=app, base_url="http://testserver") as client:
-
         yield client
 
 
