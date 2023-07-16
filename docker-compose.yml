@@ -1,25 +1,25 @@
 version: "3"
 
 services:
-  tile38:
-    image: tile38/tile38:1.30.2
-    command: >
-      /bin/sh -c 'mkdir -p tmp/data && \
-                  echo "{\"logconfig\":{\"level\":\"debug\",\"encoding\":\"json\",\"outputPaths\":[\"stdout\"],\"errorOutputPaths\":[\"stderr\"],\"encoderConfig\": {\"messageKey\":\"message\",\"levelKey\":\"level\",\"levelEncoder\":\"lowercase\", \"timeKey\":\"timestamp\",\"timeEncoder\":\"ISO8601\"}}}"> tmp/data/config
-                  tile38-server -d tmp/data -vv -p 9851 -l json'
-    ports:
-      - 9851:9851
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: fastapi-tile38
-    restart: unless-stopped
-    command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8001
-    volumes:
-        - ./src/:/usr/src/app
-    ports:
-        - 8001:8001
-    environment:
-      - TILE38_URI=redis://tile38:9851
-      - API_KEY_DEV=test
+    tile38:
+        image: tile38/tile38:1.31.0
+        command: >
+            /bin/sh -c 'mkdir -p tmp/data && \
+                        echo "{\"logconfig\":{\"level\":\"debug\",\"encoding\":\"json\",\"outputPaths\":[\"stdout\"],\"errorOutputPaths\":[\"stderr\"],\"encoderConfig\": {\"messageKey\":\"message\",\"levelKey\":\"level\",\"levelEncoder\":\"lowercase\", \"timeKey\":\"timestamp\",\"timeEncoder\":\"ISO8601\"}}}"> tmp/data/config
+                        tile38-server -d tmp/data -vv -p 9851 -l json'
+        ports:
+            - 9851:9851
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: fastapi-tile38
+        restart: unless-stopped
+        command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8001
+        volumes:
+            - ./src/:/usr/src/app
+        ports:
+            - 8001:8001
+        environment:
+            - TILE38_URI=redis://tile38:9851
+            - API_KEY_DEV=test

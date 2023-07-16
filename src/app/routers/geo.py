@@ -1,8 +1,10 @@
 from typing import Optional
+
 from fastapi import APIRouter, status
 from pyle38.responses import ObjectsResponse
+
 from app.db.db import tile38
-from app.models.vehicle import VehiclesResponse, Vehicle
+from app.models.vehicle import Vehicle, VehiclesResponse
 
 router = APIRouter()
 
@@ -18,9 +20,7 @@ async def get_within(lat: float, lon: float, radius: float) -> VehiclesResponse:
     vehicles: ObjectsResponse[Vehicle] = (
         await tile38.within("fleet").circle(lat, lon, radius).asObjects()
     )
-    response = {"data": vehicles.objects}
-
-    return VehiclesResponse(**response)
+    return VehiclesResponse(data=vehicles.dict()["objects"])
 
 
 @router.get(
@@ -42,14 +42,10 @@ async def get_nearby(
             .asObjects()
         )
 
-        response = {"data": vehicles_in_radius.objects}
-
-        return VehiclesResponse(**(response))
+        return VehiclesResponse(data=vehicles_in_radius.model_dump()["objects"])
 
     vehicles: ObjectsResponse[Vehicle] = (
         await tile38.nearby("fleet").point(lat, lon).distance().nofields().asObjects()
     )
 
-    response = {"data": vehicles.objects}
-
-    return VehiclesResponse(**(response))
+    return VehiclesResponse(data=vehicles.dict()["objects"])

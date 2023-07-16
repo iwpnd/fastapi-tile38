@@ -1,7 +1,9 @@
 from typing import Optional
-from fastapi import APIRouter, status, HTTPException
-from pyle38.responses import JSONResponse, ObjectResponse, ObjectsResponse
+
+from fastapi import APIRouter, HTTPException, status
 from pyle38.errors import Tile38IdNotFoundError, Tile38KeyNotFoundError
+from pyle38.responses import JSONResponse, ObjectResponse, ObjectsResponse
+
 from app.db.db import tile38
 from app.models.vehicle import (
     Vehicle,
@@ -59,7 +61,9 @@ async def get_all_vehicles() -> VehiclesResponse:
 async def set_vehicle(body: VehicleRequestBody) -> JSONResponse:
     vehicle = body.data
     response = (
-        await tile38.set("fleet", vehicle.properties.id).object(vehicle.dict()).exec()
+        await tile38.set("fleet", vehicle.properties.id)
+        .object(vehicle.model_dump())
+        .exec()
     )
 
     return JSONResponse(**response.dict())
