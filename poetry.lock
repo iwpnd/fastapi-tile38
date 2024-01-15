@@ -1089,13 +1089,13 @@ windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "pyle38"
-version = "0.11.1"
+version = "0.11.2"
 description = "Async python client for Tile38"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "pyle38-0.11.1-py3-none-any.whl", hash = "sha256:8ffa2a865ffe81d7b2170691ca673142d3c200a6f744ad1f39e47d34aa5b7a8c"},
-    {file = "pyle38-0.11.1.tar.gz", hash = "sha256:3e6d0e7fb5e736e5024a303f1762bf460ccbc00af3b6a1050b387766a993121e"},
+    {file = "pyle38-0.11.2-py3-none-any.whl", hash = "sha256:290d3ccb8322968bc294badbc8b6bb02e19882a6fa2d116d6eb25f141cd4915c"},
+    {file = "pyle38-0.11.2.tar.gz", hash = "sha256:d7bbf2cc4fb12d0ce8bee928ad536eb19c507809a9e11469e0f3bdb69799d398"},
 ]
 
 [package.dependencies]
@@ -1535,4 +1535,4 @@ test = ["covdefaults (>=2.2.2)", "coverage (>=7.1)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "5921df5a54f3db352b93ab71c034148c36ab7065eadc4e6dca29cbc0a779ff84"
+content-hash = "e4602936c5c7480699345cd87fe6723714e1846adb98a9b2a1076a605f465d61"
