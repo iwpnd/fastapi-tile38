@@ -47,7 +47,7 @@ def create_tile38(request, event_loop):
     return f
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture()
 async def ac() -> AsyncGenerator:
     async with AsyncClient(app=app, base_url="http://testserver") as client:
         yield client
