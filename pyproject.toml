@@ -27,7 +27,7 @@ uvicorn = "^0.26.0"
 requests = "^2.31.0"
 httpx = "^0.26.0"
 mypy = "^1.8"
-ruff = "^0.1.15"
+ruff = "^0.2.0"
 
 [mypy]
 python_version = 3.10
