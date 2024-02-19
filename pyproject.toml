@@ -15,8 +15,8 @@ pydantic-settings = "^2.1.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest-asyncio = "^0.23.5"
-pytest = "^7.4"
-pre-commit = "^3.6.1"
+pytest = "^8.0.1"
+pre-commit = "^3.6.2"
 black = "^24.2.0"
 gitlint = "^0.19.1"
 poethepoet = "^0.24.4"
@@ -27,7 +27,7 @@ uvicorn = "^0.27.1"
 requests = "^2.31.0"
 httpx = "^0.26.0"
 mypy = "^1.8"
-ruff = "^0.2.1"
+ruff = "^0.2.2"
 
 [mypy]
 python_version = 3.10
