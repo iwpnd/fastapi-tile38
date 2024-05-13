@@ -16,7 +16,7 @@ pydantic-settings = "^2.2.1"
 [tool.poetry.group.dev.dependencies]
 pytest-asyncio = "^0.23.6"
 pytest = "^8.2.0"
-pre-commit = "^3.7.0"
+pre-commit = "^3.7.1"
 gitlint = "^0.19.1"
 poethepoet = "^0.26.1"
 isort = "^5.13.2"
