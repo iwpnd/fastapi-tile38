@@ -9,7 +9,7 @@ license = "MIT"
 python = "^3.10"
 fastapi = "^0.109.2"
 pyle38 = "^0.11.3"
-pydantic = "^2.7.1"
+pydantic = "^2.7.3"
 fastapi-key-auth = "^0.15.2"
 pydantic-settings = "^2.2.1"
 
