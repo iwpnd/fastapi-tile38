@@ -834,18 +834,18 @@ files = [
 
 [[package]]
 name = "pyle38"
-version = "0.11.3"
+version = "0.12.0"
 description = "Async python client for Tile38"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "pyle38-0.11.3-py3-none-any.whl", hash = "sha256:ef2f9be4232f50c535a7ec6911e9d581e6151b5838276ae92ff20f98423bd8ed"},
-    {file = "pyle38-0.11.3.tar.gz", hash = "sha256:b7f0434f7fc4f7f11579ae1157daff4f2a851174db09534ac675f1dd16ce52f1"},
+    {file = "pyle38-0.12.0-py3-none-any.whl", hash = "sha256:89c635ef1afcc1f64c7c5f0769d721cbd7160e4b88fac6d9ed76103c80e0e84c"},
+    {file = "pyle38-0.12.0.tar.gz", hash = "sha256:7627efff372f9f4074f1ca5da2d309a88e95813287cb77aa2ed363a0282e15d7"},
 ]
 
 [package.dependencies]
 pydantic = ">=2.7.1,<3.0.0"
-redis = ">=5.0.3,<6.0.0"
+redis = ">=5.0.4,<6.0.0"
 
 [[package]]
 name = "pytest"
@@ -995,13 +995,13 @@ files = [
 
 [[package]]
 name = "redis"
-version = "5.0.3"
+version = "5.0.7"
 description = "Python client for Redis database and key-value store"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "redis-5.0.3-py3-none-any.whl", hash = "sha256:5da9b8fe9e1254293756c16c008e8620b3d15fcc6dde6babde9541850e72a32d"},
-    {file = "redis-5.0.3.tar.gz", hash = "sha256:4973bae7444c0fbed64a06b87446f79361cb7e4ec1538c022d696ed7a5015580"},
+    {file = "redis-5.0.7-py3-none-any.whl", hash = "sha256:0e479e24da960c690be5d9b96d21f7b918a98c0cf49af3b6fafaa0753f93a0db"},
+    {file = "redis-5.0.7.tar.gz", hash = "sha256:8f611490b93c8109b50adc317b31bfd84fff31def3475b92e7e80bf39f48175b"},
 ]
 
 [package.dependencies]
@@ -1216,4 +1216,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "c276c878921173f7cd449351e368e728d9f0076ecd91d2062109cfd305ad0417"
+content-hash = "35d1cdaf98b1f244f6c91380b6af7b64564b482f276494e089bf1e49a7e61701"
