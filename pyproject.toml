@@ -21,7 +21,6 @@ gitlint = "^0.19.1"
 poethepoet = "^0.28.0"
 isort = "^5.13.2"
 pytest-cov = "^5.0.0"
-flake8 = "^7.1.0"
 uvicorn = "^0.30.1"
 requests = "^2.32.3"
 httpx = "^0.27.0"
@@ -32,6 +31,50 @@ python-semantic-release = "^9.8.8"
 [mypy]
 python_version = 3.10
 ignore_missing_imports = true
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = ["E501"]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [tool.poe.tasks]
 test       = "poetry run pytest -vv --asyncio-mode=auto -s src/tests/"

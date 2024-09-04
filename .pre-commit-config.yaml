@@ -9,11 +9,6 @@ repos:
         args: ["--markdown-linebreak-ext=md"]
       - id: check-json
       - id: check-ast
-  - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
-    hooks:
-      - id: isort
-        name: isort (python)
   - repo: https://github.com/jorisroovers/gitlint
     rev: v0.19.1 # Fill in a tag / sha here
     hooks:
