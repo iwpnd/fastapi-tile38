@@ -98,8 +98,10 @@ jobs:
         run: poetry install
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       - name: start tile38
-        run: docker-compose up -d tile38
+        run: docker compose up -d tile38
       - name: Test
         run: |
           source .venv/bin/activate
           poetry run poe test
+      - name: stop tile38
+        run: docker compose down
