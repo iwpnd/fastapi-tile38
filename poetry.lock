@@ -821,18 +821,18 @@ yaml = ["pyyaml (>=6.0.1)"]
 
 [[package]]
 name = "pyle38"
-version = "0.13.3"
+version = "0.14.0"
 description = "Async python client for Tile38"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "pyle38-0.13.3-py3-none-any.whl", hash = "sha256:71528f1417b56e2a6291ba0e64908abc510d8461ce0315139785ecac532f9755"},
-    {file = "pyle38-0.13.3.tar.gz", hash = "sha256:155b8ef9d06c46b8e87b0fa68a68cf65a925b62ea898551828fe0a8acc5be096"},
+    {file = "pyle38-0.14.0-py3-none-any.whl", hash = "sha256:0a3ac6454c5a3cb5a57a61ee114ef000f1ed7a1ad4a3f1e988f3df35c8b32da6"},
+    {file = "pyle38-0.14.0.tar.gz", hash = "sha256:0c061e7747d3f2e53ecec243f465b4ddb1ed948e07c7a762e4460a669705b6db"},
 ]
 
 [package.dependencies]
 pydantic = ">=2.9.2,<3.0.0"
-redis = ">=5.1.1,<6.0.0"
+redis = ">=5.2.0,<6.0.0"
 
 [[package]]
 name = "pytest"
@@ -1189,4 +1189,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "ca4370225ea6f2ab2d5107d5fe57aa62b384e1d05684c6c55f0a439c0446d86b"
+content-hash = "db859fb70aec288d13e05cd9b97fe3d44957641f9d6d63c8e35b7586d2ab8dce"
