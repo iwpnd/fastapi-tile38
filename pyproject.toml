@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Use Tile38 via FastAPI"
 authors = ["Benjamin Ramser <legionaerr@googlemail.com>"]
 license = "MIT"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
