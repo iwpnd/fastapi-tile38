@@ -2,7 +2,7 @@ import asyncio
 from typing import AsyncGenerator
 
 import pytest
-from httpx import AsyncClient
+from httpx import AsyncClient, ASGITransport
 from pyle38 import Tile38
 
 from app.config.settings import settings
@@ -49,7 +49,9 @@ def create_tile38(request, event_loop):
 
 @pytest.fixture()
 async def ac() -> AsyncGenerator:
-    async with AsyncClient(app=app, base_url="http://testserver") as client:
+    async with AsyncClient(
+        transport=ASGITransport(app=app), base_url="http://testserver"
+    ) as client:
         yield client
 
 
